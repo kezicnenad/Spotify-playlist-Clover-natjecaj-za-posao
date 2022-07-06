@@ -40,3 +40,11 @@ h6{
 h6:last-child{
   padding-bottom: 80px;
 }
+
+.modal{
+  color: #000;
+}
+
+.modal p{
+  color: #000;
+}
