@@ -23,20 +23,31 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>App</h1>
+    <div className="jumbotron text-center">
+      <div className="row header">
+        <h1>Top Pop</h1>
+      </div>
 
-      <button className="btn btn-warning" onClick={fetchAscending}>Asc</button>
-      <button className="btn btn-warning" onClick={fetchDescending}>Desc</button>
+      <div className="container filter">
+        <p>Filter</p>
+        <button className="btn btn-warning" onClick={fetchAscending}>
+          Asc
+        </button>
+        <button className="btn btn-warning" onClick={fetchDescending}>
+          Desc
+        </button>
+      </div>
 
-      {playlist.map((item, index) => (
-        <div key={index}>
-          <img src={item.album.cover_big} alt={item.title} />
-          <p>Artist: {item.artist.name}</p>
-          <p>Album: {item.album.title}</p>
-          <p>Title: {item.title}</p>
-        </div>
-      ))}
+      <div className="row">
+        {playlist.map((item, index) => (
+          <div key={index}>
+            <img className="cover" src={item.album.cover_big} alt={item.title} />
+            <h6 className="artist">Artist: {item.artist.name}</h6>
+            <h6 className="album">Album: {item.album.title}</h6>
+            <h6 className="title">Title: {item.title}</h6>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
