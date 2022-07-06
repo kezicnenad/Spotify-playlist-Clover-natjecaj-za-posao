@@ -52,23 +52,61 @@ function App() {
       </div>
 
       <div className="container filter">
-        <p>Filter</p>
+        {/* <p>Filter</p> */}
+
+        {/* <div className="form-group">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+              checked
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              Default
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Ascending
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault2"
+            />
+            <label class="form-check-label" for="flexRadioDefault2">
+              Decending
+            </label>
+          </div>
+        </div> */}
+
         <button className="btn btn-warning" onClick={fetchData}>
           Default
         </button>
         <button className="btn btn-warning" onClick={fetchAscending}>
-          Asc
+          Ascending
         </button>
         <button className="btn btn-warning" onClick={fetchDescending}>
-          Desc
+          Descending
         </button>
       </div>
 
       <div className="row">
         {playlist.map((item, index) => (
-          <div key={index} onClick={e=>selectSong(e, item.id)}>
+          <div className='song' key={index} onClick={(e) => selectSong(e, item.id)}>
             <img
-              className="cover"
+              className="album-cover"
               src={item.album.cover_big}
               alt={item.title}
             />
@@ -78,7 +116,11 @@ function App() {
           </div>
         ))}
       </div>
-      <ModalDialog show={showModal} handleCloseModal={handleCloseModal} selectedItem={selectedItem} />
+      <ModalDialog
+        show={showModal}
+        handleCloseModal={handleCloseModal}
+        selectedItem={selectedItem}
+      />
     </div>
   );
 }
