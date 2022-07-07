@@ -13,7 +13,6 @@ function App() {
 
   useEffect(() => {
     fetchData();
-    console.log('ERROR', error);
   }, []);
 
   const fetchData = async () => {
