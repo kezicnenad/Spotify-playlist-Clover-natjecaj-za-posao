@@ -45,16 +45,36 @@ h6{
   font-weight: 500;
 }
 
-h6:last-child{
-  padding-bottom: 80px;
-}
-
 .modal{
   color: #000;
 }
 
 .modal p{
   color: #000;
+}
+
+.modal-title{
+  font-size: .5em;
+}
+
+.song{
+  margin-bottom: 80px;
+  transition: .2s;
+}
+
+.song:hover{
+  cursor: pointer;
+  transition: .2s;
+}
+
+.sweet-loading{
+  position: absolute;
+  top: -200px;
+  left: -100px;
+  width: 200px;
+  height: 200px;
+  background-color: transparent;
+  margin: 50% 50%;
 }
 
 @media only screen and (max-width: 600px) {
