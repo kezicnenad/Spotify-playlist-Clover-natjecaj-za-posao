@@ -54,6 +54,11 @@ function App() {
     handleOpenModal();
   }
 
+  const duration = (seconds) => {
+    const time = new Date(seconds * 1000).toISOString().slice(14, 19);
+    return time;
+  }
+
   return (
     <div className="jumbotron text-center">
       <div className="row header">
@@ -92,7 +97,7 @@ function App() {
             <h6 className="album">Album: {item.album.title}</h6>
             <h6 className="title">Title: {item.title}</h6>
             <h6>
-              {/* Duration:{" "} */}
+              Duration: {duration(item.duration)}
               {/* {durationMinutes && (durationMinutes >= 10 ? durationMinutes : "0" + durationMinutes)}:
               {durationSeconds && (durationSeconds >= 10 ? durationSeconds : "0" + durationSeconds)} */}
             </h6>

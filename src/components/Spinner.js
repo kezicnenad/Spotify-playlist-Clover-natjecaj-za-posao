@@ -4,7 +4,7 @@ import ClipLoader from "react-spinners/ClipLoader";
 const override: CSSProperties = {
   display: "block",
   margin: "0 auto",
-  borderColor: "red",
+  borderColor: "yellow",
 };
 
 function Spinner() {
@@ -13,6 +13,7 @@ function Spinner() {
   return (
     <div className="sweet-loading">
       <ClipLoader
+        className="spinner"
         color="yellow"
         loading={loading}
         cssOverride={override}

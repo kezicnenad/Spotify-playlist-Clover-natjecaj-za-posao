@@ -23,7 +23,7 @@ p{
 }
 
 .filter{
-  padding: 0px 30vw 60px 30vw;
+  padding: 0px 320px 60px 320px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -67,25 +67,17 @@ h6{
   transition: .2s;
 }
 
-.sweet-loading{
-  position: absolute;
-  top: -200px;
-  left: -100px;
-  width: 200px;
-  height: 200px;
-  background-color: transparent;
-  margin: 50% 50%;
-}
-
 @media only screen and (max-width: 600px) {
+  h6{
+    font-size: .6em;
+  }
+
   .filter{
     flex-direction: column;
     padding: 10px 10px;
   }
 
-    .filter button {
-      margin-bottom: 10px;
-    }  .filter button{
+  .filter button {
     margin-bottom: 10px;
   }
 
@@ -95,5 +87,14 @@ h6{
 
   .album-cover{
     width: 94%;
+  }
+
+  .spinner {
+    position: absolute !important;
+    height: 200px !important;
+    width: 200px !important;
+    left: 100px !important;
+    top: 200 !important;
+    border-width: 5px !important;
   }
 }
