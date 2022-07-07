@@ -19,6 +19,7 @@ function Spinner() {
         cssOverride={override}
         size={180}
       />
+      <p className="loading">Loading data from API</p>
     </div>
   );
 }

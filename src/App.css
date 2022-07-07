@@ -7,65 +7,70 @@ body{
   background: rgba(252, 176, 69, 1);
   background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
 }
-
-.header{
-  color: #fff;
-}
-
-h1{
+h1 {
   padding-top: 120px;
   padding-bottom: 80px;
 }
-
-p{
+h6 {
+  padding-top: 20px;
+  font-size: 1.4em;
+  font-weight: 500;
+}
+p {
   color: #fff;
   font-size: .8em;
 }
 
+.header{
+  color: #fff;
+}
 .filter{
   padding: 0px 320px 60px 320px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .filter button {
   margin-left: 5px;
   margin-right: 5px;
 }
-
 .album-cover{
   border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
 }
-
-h6{
-  padding-top: 20px;
-  font-size: 1.4em;
-  font-weight: 500;
-}
-
 .modal{
   color: #000;
 }
-
 .modal p{
   color: #000;
 }
-
 .modal-title{
   font-size: .5em;
 }
-
 .song{
   margin-bottom: 80px;
   transition: .2s;
 }
-
 .song:hover{
   cursor: pointer;
   opacity: .8;
   transition: .2s;
+}
+.spinner {
+  /* position: absolute !important;
+  height: 200px !important;
+  width: 200px !important;
+  left: 100px !important;
+  top: 200 !important;
+  border-width: 5px !important; */
+  width: 200px;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading{
+  padding-top: 40px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -77,25 +82,14 @@ h6{
     flex-direction: column;
     padding: 10px 10px;
   }
-
   .filter button {
     margin-bottom: 10px;
   }
-
   .filter button:last-child {
     margin-bottom: 0px;
   }
-
   .album-cover{
     width: 94%;
   }
 
-  .spinner {
-    position: absolute !important;
-    height: 200px !important;
-    width: 200px !important;
-    left: 100px !important;
-    top: 200 !important;
-    border-width: 5px !important;
-  }
 }

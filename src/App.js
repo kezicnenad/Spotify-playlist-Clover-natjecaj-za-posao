@@ -59,7 +59,7 @@ function App() {
   }
 
   return (
-    <div className="jumbotron text-center">
+    <div className="container text-center">
       <div className="row header">
         <h1>Top Pop</h1>
         {error === "Loading" && <Spinner />}
