@@ -64,6 +64,7 @@ h6{
 
 .song:hover{
   cursor: pointer;
+  opacity: .8;
   transition: .2s;
 }
 
